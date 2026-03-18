@@ -1,4 +1,4 @@
-🛡️ DiagCyber NIS2 — Auto-diagnostic NIS2 par objectifs stratégiques
+🛡️ DiagCyber NIS2 — Auto-diagnostic NIS2
 
 Outil d'auto-évaluation de maturité cybersécurité basé sur le référentiel ReCyF v2.5 de l'ANSSI, aligné sur la directive NIS2.
 
