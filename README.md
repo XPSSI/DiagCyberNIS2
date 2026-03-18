@@ -20,7 +20,7 @@ PilierThématiques1️⃣ GouvernancePolitiques de sécurité, gestion des risqu
 
 ⚙️ Fonctionnement
 
-Ouvrir le fichier DiagRecyf.html dans n'importe quel navigateur moderne
+Ouvrir le fichier DiagCyberNIS2.html dans n'importe quel navigateur moderne
 Répondre aux questions basées sur les 42 règles d'hygiène ANSSI
 Visualiser votre positionnement sur les 20 objectifs stratégiques ReCyF
 Identifier vos zones de faiblesse et prioriser vos actions
