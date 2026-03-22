@@ -16,7 +16,7 @@
 <meta name="msapplication-navbutton-color" content="#1E5FA8">
 <!-- Open Graph -->
 <meta property="og:title" content="DiagCyber Conformité NIS2 v1.0">
-<meta property="og:description" content="Diagnostic ANSSI ↔ ReCyF NIS2 — Plan d'action EI/EE">
+<meta property="og:description" content="Diagnostic Cyber - Guide hygiène ANSSI ↔ ReCyF NIS2 — Plan d'action EI/EE">
 <meta property="og:type" content="website">
 <!-- Manifest inline via JS (injecté après chargement) -->
 <link id="pwa-manifest" rel="manifest">
@@ -366,7 +366,7 @@ table.scores-tbl{width:100%;border-collapse:collapse}
 <div id="pwa-splash">
   <div class="pwa-splash-icon">🔗</div>
   <div class="pwa-splash-title">DiagCyber NIS2</div>
-  <div class="pwa-splash-sub">Conformité NIS2 · ANSSI ↔ ReCyF v2.5</div>
+  <div class="pwa-splash-sub">Conformité NIS2 · Guide hygiène ANSSI ↔ ReCyF v2.5</div>
   <div class="pwa-splash-loader"><div class="pwa-splash-loader-bar"></div></div>
 </div>
 
@@ -395,7 +395,7 @@ table.scores-tbl{width:100%;border-collapse:collapse}
 <div id="topbar" class="no-print">
   <!--<div id="logo-zone" title="DiagCyber NIS2">
   </div>-->
-  <div id="topbar-title">DiagCyber NIS2 <span style="font-size:11px;opacity:.6;font-weight:400">v1.0</span> — <span>Conformité NIS2 · ANSSI ↔ ReCyF</span></div>
+  <div id="topbar-title">DiagCyber NIS2 <span style="font-size:11px;opacity:.6;font-weight:400">v1.0</span> — <span>Conformité NIS2 · Guide hygiène ANSSI ↔ ReCyF</span></div>
   <div id="topbar-prog"><div id="topbar-prog-bar"></div></div>
   <div id="topbar-nav">
     <button class="tb-btn no-print" onclick="goTo('welcome')">🏠 Accueil</button>
@@ -412,7 +412,7 @@ table.scores-tbl{width:100%;border-collapse:collapse}
     <div class="w-icon">🔗</div>
     <h1>Conformité NIS2 — ReCyF v2.5</h1>
     <div class="w-tags">
-      <span class="w-tag w-tag-g">42 règles ANSSI</span>
+      <span class="w-tag w-tag-g">42 règles guide ANSSI</span>
       <span class="w-tag w-tag-g">20 objectifs ReCyF</span>
       <span class="w-tag w-tag-ei">EI — Entité Importante</span>
       <span class="w-tag w-tag-ee">EE — Entité Essentielle</span>
@@ -438,6 +438,7 @@ table.scores-tbl{width:100%;border-collapse:collapse}
       <strong>DiagCyber Conformité NIS2</strong> · <strong>Version 1.0</strong> · Mars 2026<br>
       Référentiels : <strong>Guide d'Hygiène Informatique ANSSI</strong> (2e éd. 2017 · 42 règles) · <strong>ReCyF v2.5</strong> du 17/03/2026 · Directive NIS2 2022/2555<br>
       Création : <strong>Xavier PAYEN</strong> · Données 100 % locales — aucun envoi réseau
+	  <br></i>Ce diagnostic est fourni à titre indicatif et ne saurait engager la responsabilité de l'ANSSI. Il ne constitue pas une attestion de conformité.</i>
     </div>
   </div>
 </div>
@@ -505,7 +506,7 @@ table.scores-tbl{width:100%;border-collapse:collapse}
   <div id="res-anchormenu" class="no-print">
     <div class="res-anchor-wrap">
       <a href="#res-scores" class="res-anchor-btn active" title="KPIs, radars et scores globaux">📊 Synthèse</a>
-      <a href="#res-anssi-ap" class="res-anchor-btn" title="Plan d'action sur les 42 règles ANSSI — atteinte du niveau 3">🎯 Plan ANSSI</a>
+      <a href="#res-anssi-ap" class="res-anchor-btn" title="Plan d'action sur les 42 règles ANSSI — atteinte du niveau 3">🎯 Plan guide ANSSI</a>
       <a href="#res-mapping" class="res-anchor-btn" title="État de conformité par objectif ReCyF NIS2">🔗 ReCyF</a>
       <a href="#res-action-ei" class="res-anchor-btn" title="Plan d'action NIS2 pour les Entités Importantes">🔵 Plan EI</a>
       <a href="#res-action-ee" class="res-anchor-btn" title="Plan d'action NIS2 pour les Entités Essentielles">🟣 Plan EE</a>
@@ -525,9 +526,9 @@ table.scores-tbl{width:100%;border-collapse:collapse}
 
     <!-- ① SYNTHESE -->
     <div id="res-scores" class="res-section">
-      <div class="res-section-title">📊 Synthèse — Scores ANSSI & Couverture ReCyF</div>
+      <div class="res-section-title">📊 Synthèse — Scores guide ANSSI & Couverture ReCyF</div>
       <div class="res-2col">
-        <div class="card"><div class="card-title" style="font-size:14px">🕸️ Radar ANSSI — Thèmes</div>
+        <div class="card"><div class="card-title" style="font-size:14px">🕸️ Radar guide ANSSI — Thèmes</div>
           <div style="display:flex;justify-content:center;padding:4px 0"><canvas id="radar" width="380" height="380" style="max-width:100%"></canvas></div>
           <p style="text-align:center;font-size:10.5px;color:var(--g400);margin-top:5px">● Anneau vert = niveau 3 (seuil de référence)</p>
         </div>
@@ -1866,7 +1867,7 @@ function showResults(){
   const etBg=etype==='EI'?'background:#DBEAFE':etype==='EE'?'background:#EDE9FE':'background:var(--g100)';
   document.getElementById('kpi-grid').innerHTML=`
     <div class="kpi"><div class="kpi-ico" style="background:#ebf3fb">🎯</div>
-      <div><div class="kpi-val">${gs.toFixed(1)}/5</div><div class="kpi-lbl">Score ANSSI global</div></div></div>
+      <div><div class="kpi-val">${gs.toFixed(1)}/5</div><div class="kpi-lbl">Score Cyber global</div></div></div>
     <div class="kpi"><div class="kpi-ico" style="background:#ebf3fb">📊</div>
       <div><div style="margin-top:2px"><span class="level-badge ${getLevelClass(gs)}">${getLevelLabel(gs)}</span></div><div class="kpi-lbl">Niveau de conformité</div></div></div>
     <div class="kpi"><div class="kpi-ico" style="background:#d1fae5">✅</div>
@@ -1877,7 +1878,7 @@ function showResults(){
       <div><div class="kpi-val">${osKO}/${maxOS}</div><div class="kpi-lbl">OS ReCyF &lt;3 (non conformes)</div></div></div>`;
 
   // Scores table
-  let rows='<tr><th>Thème ANSSI</th><th>Score</th><th>Niveau</th><th>Progression</th></tr>';
+  let rows='<tr><th>Thème guide ANSSI</th><th>Score</th><th>Niveau</th><th>Progression</th></tr>';
   SECTIONS.forEach(sec=>{
     const sc=getSectionScore(sec);
     const pct=sc!==null?Math.round((sc/5)*100):0;
@@ -1961,7 +1962,7 @@ function renderMappingGrid(filter){
       <div style="font-size:12px;font-weight:700;color:${pilierColor[pilier]||'var(--gd)'};text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;padding:5px 10px;background:${pilierColor[pilier]||'var(--g)'}18;border-radius:6px;border-left:3px solid ${pilierColor[pilier]||'var(--g)'}">${pilier}</div>
       <div style="overflow-x:auto;border-radius:var(--r);border:1px solid var(--g200)">
       <table class="recyf-table">
-        <tr><th>Objectif</th><th>Titre & Description</th><th>Applicable</th><th>Score</th><th>Niveau</th><th>Règles ANSSI</th></tr>
+        <tr><th>Objectif</th><th>Titre & Description</th><th>Applicable</th><th>Score</th><th>Niveau</th><th>Règles guide ANSSI</th></tr>
         ${pilierHtml}
       </table></div></div>`;
   });
@@ -1981,7 +1982,7 @@ function filterMapping(f,btn){
 // PLAN D'ACTION
 // ════════════════════════════════════════════════════════════════
 // ════════════════════════════════════════════════════════════════
-// PLAN D'ACTION ANSSI — Niveau 3 minimum, puis progression vers le niveau supérieur
+// PLAN D'ACTION AMELIORATIONS AUX 42 REGLES ANSSI — Niveau 3 minimum, puis progression vers le niveau supérieur
 // ════════════════════════════════════════════════════════════════
 function renderAnssiActionPlan(){
   const el=document.getElementById('ap-anssi-content');
@@ -2063,7 +2064,7 @@ function renderAnssiActionPlan(){
         </div>
         <div class="anssi-ap-body">
           <div style="font-size:11.5px;color:var(--g500);font-style:italic;margin-bottom:10px;padding:7px 10px;background:var(--g50);border-radius:6px;border-left:3px solid var(--g200)">
-            <strong style="color:var(--g800);font-style:normal">Règle ANSSI ${q.rule} :</strong> ${q.ruleText}
+            <strong style="color:var(--g800);font-style:normal">Règle guide ANSSI ${q.rule} :</strong> ${q.ruleText}
           </div>
           <div style="font-size:11.5px;color:var(--g600);margin-bottom:4px;padding:6px 10px;border:1px dashed var(--g300);border-radius:6px">
             <strong>Situation actuelle (niveau ${sc}/5) :</strong> ${q.options.find(o=>o.score===sc)?.main||'—'} — ${q.options.find(o=>o.score===sc)?.desc||''}
@@ -2286,7 +2287,7 @@ function downloadAudit(qId){
 }
 
 // ════════════════════════════════════════════════════════════════
-// RADAR — ANSSI + RECYF
+// RADAR — ANSSI(42) + RECYF
 // ════════════════════════════════════════════════════════════════
 
 // ReCyF radar: draws all 20 OS as spokes, colored by EI/EE/both
@@ -2488,7 +2489,7 @@ function downloadTemplate(){
       ['Champ','Valeur'],['Entreprise',''],['Répondant',''],['Évaluateur',''],
       ['Date',''],['Référence',''],['Type entité','EI ou EE']
     ]),'Identification');
-    const qData=[['ID','Règle ANSSI','Thème','Intitulé règle','Objectifs ReCyF','Score (0-5 ou N/A)','Commentaire']];
+    const qData=[['ID','Règle guide ANSSI','Thème','Intitulé règle','Objectifs ReCyF','Score (0-5 ou N/A)','Commentaire']];
     SECTIONS.forEach(sec=>sec.questions.forEach(q=>{
       const objs=(ANSSI_TO_RECYF[q.id]||[]).map(id=>`OS${String(RECYF_OBJECTIVES[id]?.num||'?').padStart(2,'0')}`).join(', ');
       qData.push([q.id,q.rule,sec.title,q.ruleTitle,objs,'','']);
@@ -2575,8 +2576,9 @@ function exportAuditZip(){
     });
 
     readmeTxt.push('','Total : '+count+' fichier'+(count>1?'s':''));
-    readmeTxt.push('','Création : Xavier PAYEN — DiagCyber ReCyF v1.0');
+    readmeTxt.push('','');
     readmeTxt.push('Référentiels : ANSSI Hygiène Informatique 2017 · ReCyF v2.5 · NIS2 2022/2555');
+	readmeTxt.push('Ce diagnostic est fourni à titre indicatif et ne saurait engager la responsabilité de l ANSSI. Il ne constitue pas une attestion de conformité.');
     zip.file('README.txt', readmeTxt.join('\r\n'));
 
     const zipName=ref+'_pistes-audit.zip';
@@ -2611,7 +2613,7 @@ function exportCSV(){
   const etype=getEntityType();
   let rows=[['DiagCyber ReCyF — Conformité NIS2'],['Entreprise',STATE.ident.entreprise],
     ['Type entité',etype],['Date',STATE.ident.date],['Référence',STATE.ident.ref],[],
-    ['--- SCORES ANSSI PAR THÈME ---'],['Thème','Score /5','Niveau']];
+    ['--- SCORES CYBER PAR THÈME ---'],['Thème','Score /5','Niveau']];
   SECTIONS.forEach(s=>{const sc=getSectionScore(s);rows.push([s.title,sc!==null?sc.toFixed(2):'N/R',getLevelLabel(sc)]);});
   rows.push(['GLOBAL',getGlobalScore().toFixed(2),getLevelLabel(getGlobalScore())],[],
     ['--- MAPPAGE RECYF ---'],['OS Num','Titre','Pilier','EI','EE','Score /5','Niveau']);
@@ -2644,7 +2646,7 @@ function exportXlsx(){
   ]),'Identification');
   const scData=[['Thème ANSSI','Score /5','Niveau']];
   SECTIONS.forEach(s=>{const sc=getSectionScore(s);scData.push([s.title,sc!==null?parseFloat(sc.toFixed(2)):null,getLevelLabel(sc)]);});
-  XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(scData),'Scores ANSSI');
+  XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(scData),'Scores Cyber');
   const mapData=[['OS Num','Titre','Pilier','Applicable EI','Applicable EE','Score /5','Niveau','Règles ANSSI associées']];
   Object.entries(RECYF_OBJECTIVES).forEach(([id,obj])=>{
     const sc=getRecyfScore(id);
@@ -2716,7 +2718,7 @@ function exportPdf(){
   doc.setFontSize(7.5);doc.setFont('helvetica','bold');doc.setTextColor(255,255,255);doc.text('DiagCyber ReCyF v1.0',14,9);
   doc.setFontSize(9);doc.setFont('helvetica','normal');doc.setTextColor(255,255,255);doc.text('ReCyF v2.5 du 17/03/2026 · Directive NIS2 2022/2555',W/2,12,{align:'center'});
   doc.setFontSize(20);doc.setFont('helvetica','bold');doc.text('Rapport de Conformité NIS2',W/2,24,{align:'center'});
-  doc.setFontSize(11);doc.setFont('helvetica','normal');doc.text('Mappage ANSSI ↔ ReCyF · Document confidentiel',W/2,34,{align:'center'});
+  doc.setFontSize(11);doc.setFont('helvetica','normal');doc.text('Mappage guide ANSSI ↔ ReCyF · Document confidentiel',W/2,34,{align:'center'});
   doc.setFontSize(10);doc.setFont('helvetica','bold');doc.setTextColor(etype==='EE'?EE[0]:EI[0],etype==='EE'?EE[1]:EI[1],etype==='EE'?EE[2]:EI[2]);
   doc.text(`Entité ${etype==='EI'?'Importante (EI)':etype==='EE'?'Essentielle (EE)':'Non concernée (indicatif)'}`,W/2,44,{align:'center'});
   doc.setFillColor(255,255,255);doc.roundedRect(14,60,W-28,56,3,3,'F');
@@ -2729,13 +2731,13 @@ function exportPdf(){
   const critiques=SECTIONS.flatMap(s=>s.questions).filter(q=>{const sc=getQScore(q);return sc!==null&&sc<2;}).length;
   doc.setFillColor(...G);doc.roundedRect(14,124,W-28,22,3,3,'F');
   doc.setFontSize(11);doc.setFont('helvetica','bold');doc.setTextColor(255,255,255);
-  doc.text(`Score ANSSI global : ${gs.toFixed(1)}/5  —  ${getLevelLabel(gs)}`,W/2,133,{align:'center'});
+  doc.text(`Score Cyber global : ${gs.toFixed(1)}/5  —  ${getLevelLabel(gs)}`,W/2,133,{align:'center'});
   doc.setFontSize(9);doc.setFont('helvetica','normal');
   doc.text(`${conformes} règles conformes (≥3) · ${critiques} règles critiques (<2)`,W/2,141,{align:'center'});
-  doc.setFontSize(7.5);doc.setTextColor(...GR);doc.text('DiagCyber Conformité NIS2 v1.0 · Création : Xavier PAYEN · Référentiels : ANSSI Hygiène Informatique 2017 + ReCyF v2.5 · NIS2 2022/2555',W/2,H-14,{align:'center'});
+  doc.setFontSize(7.5);doc.setTextColor(...GR);doc.text('Ce diagnostic est fourni à titre indicatif et ne saurait engager la responsabilité de l ANSSI. Il ne constitue pas une attestion de conformité.',W/2,H-14,{align:'center'});
   ftr(1);conf(1);
 
-  // PAGE 2 — Scores ANSSI + Radar
+  // PAGE 2 — Scores Cyber (42 régles ANSSI) + Radar
   doc.addPage();let y=20;
   doc.setFontSize(12);doc.setFont('helvetica','bold');doc.setTextColor(...DG);doc.text('Scores par thème ANSSI',14,y);y+=8;
   doc.autoTable({startY:y,head:[['Thème','Score /5','Niveau']],
@@ -2744,11 +2746,11 @@ function exportPdf(){
     bodyStyles:{fontSize:9,cellPadding:3},margin:{left:14,right:14}});
   const rc=document.getElementById('radar');
   if(rc){try{const ri=rc.toDataURL('image/png',1);const ry=doc.lastAutoTable.finalY+8;if(ry+70<H-20)doc.addImage(ri,'PNG',(W-65)/2,ry,65,65);}catch(e){}}
-  hdr(2,'Scores ANSSI');ftr(2);conf(2);
+  hdr(2,'Scores Cyber');ftr(2);conf(2);
 
   // PAGE 3 — Mappage ReCyF
   doc.addPage();y=20;
-  doc.setFontSize(12);doc.setFont('helvetica','bold');doc.setTextColor(...DG);doc.text('Mappage ANSSI ↔ ReCyF — État par objectif de sécurité',14,y);y+=8;
+  doc.setFontSize(12);doc.setFont('helvetica','bold');doc.setTextColor(...DG);doc.text('Mappage guide hygiène ANSSI ↔ ReCyF — État par objectif de sécurité',14,y);y+=8;
   const mapRows=Object.entries(RECYF_OBJECTIVES).map(([id,obj])=>{
     const sc=getRecyfScore(id);
     const appli=etype==='EE'?(obj.ei?'EI/EE':'EE seul'):(obj.ei?'EI':'N/A');
@@ -2871,21 +2873,21 @@ function exportDocx(){
 
   let body='';
   body+=p(run('Rapport de Conformité NIS2 — ReCyF v2.5',{b:true,sz:30,c:G}),{sp:[0,120],al:'center'});
-  body+=p(run('Mappage ANSSI ↔ ReCyF · Document confidentiel',{sz:20,c:DG}),{sp:[0,80],al:'center'});
+  body+=p(run('Mappage guide hygiène ANSSI ↔ ReCyF · Document confidentiel',{sz:20,c:DG}),{sp:[0,80],al:'center'});
   body+=p(run(`Entité ${etype==='EI'?'Importante (EI)':'Essentielle (EE)'} · ReCyF v2.5 du 17/03/2026`,{sz:18,c:etype==='EE'?EE:EI,b:true}),{sp:[0,240],al:'center'});
   body+=tbl(['Champ','Valeur'],[
     ['Entreprise',STATE.ident.entreprise||'—'],['Type entité',etype],['Répondant',STATE.ident.repondant||'—'],
     ['Évaluateur',STATE.ident.diagnostiqueur||'—'],['Date',STATE.ident.date||'—'],['Référence',STATE.ident.ref||'—'],
   ],[2500,6572]);
   body+=em();
-  body+=`<w:p><w:pPr><w:shd w:val="clear" w:color="auto" w:fill="E8F5EE"/><w:spacing w:before="120" w:after="120"/></w:pPr>${run('Score ANSSI global : '+gs.toFixed(1)+'/5  —  '+getLevelLabel(gs),{b:true,sz:24,c:G})}</w:p>`;
+  body+=`<w:p><w:pPr><w:shd w:val="clear" w:color="auto" w:fill="E8F5EE"/><w:spacing w:before="120" w:after="120"/></w:pPr>${run('Score Cyber global : '+gs.toFixed(1)+'/5  —  '+getLevelLabel(gs),{b:true,sz:24,c:G})}</w:p>`;
   body+=pb();
 
-  body+=h1('1. Scores par thème ANSSI');
+  body+=h1('1. Scores Cyber par thème ANSSI');
   body+=tbl(['Thème','Score /5','Niveau'],SECTIONS.map(s=>{const sc=getSectionScore(s);return[s.title,sc!==null?sc.toFixed(2):'N/R',getLevelLabel(sc)];}));
   body+=pb();
 
-  body+=h1('2. Mappage ANSSI ↔ ReCyF — État par objectif');
+  body+=h1('2. Mappage guide hygiène ANSSI ↔ ReCyF — État par objectif');
   body+=tbl(['OS','Pilier','Titre','Applicable','Score','Niveau'],
     Object.entries(RECYF_OBJECTIVES).map(([id,obj])=>{
       const sc=getRecyfScore(id);
@@ -2928,6 +2930,7 @@ function exportDocx(){
   body+=em();
   body+=p(run('DiagCyber Conformité NIS2 v1.0 — Xavier PAYEN',{sz:16,c:GR}),{al:'center'});
   body+=p(run('Référentiels : Guide d\'Hygiène Informatique ANSSI 2e éd. 2017 · ReCyF v2.5 du 17/03/2026 · Directive NIS2 2022/2555',{sz:16,c:GR}),{al:'center'});
+  body+=p(run('Ce diagnostic est fourni à titre indicatif et ne saurait engager la responsabilité de l ANSSI. Il ne constitue pas une attestion de conformité.',{sz:14,c:GR}),{al:'center'});
 
   const NS='xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"';
   const docXml=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document ${NS}><w:body>${body}<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134"/></w:sectPr></w:body></w:document>`;
@@ -3021,7 +3024,7 @@ document.getElementById('modal-overlay').addEventListener('click',function(e){if
   const manifest = {
     name: 'DiagCyber ReCyF v1.0 — Conformité NIS2',
     short_name: 'DiagCyber ReCyF v1.0',
-    description: 'Diagnostic de conformité NIS2 — Mappage ANSSI ↔ ReCyF v2.5. 42 règles, 20 objectifs, plan d\'action EI/EE.',
+    description: 'Diagnostic de conformité NIS2 — Mappage guide hygiène ANSSI ↔ ReCyF v2.5. 42 règles, 20 objectifs, plan d\'action EI/EE.',
     start_url: './',
     display: 'standalone',
     orientation: 'any',
