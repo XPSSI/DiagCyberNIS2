@@ -47,7 +47,7 @@ Directive NIS2 — EUR-Lex
 
 
 ⚠️ Avertissement
-Cet outil est un support d'auto-évaluation indicatif. Il ne constitue pas un audit de conformité NIS2 et ne remplace pas l'accompagnement d'un expert en cybersécurité. Les résultats ont vocation à orienter une démarche, non à certifier un niveau de conformité.
+Cet outil est un support d'auto-évaluation indicatif et ne saurait engager la responsabilité de l'ANSSI. Cet outil ne constitue pas un audit de conformité NIS2, ne constitue pas une attestation de conformité, et ne remplace pas l'accompagnement d'un expert en cybersécurité. Les résultats ont vocation à orienter une démarche, non à certifier un niveau de conformité.
 
 🤝 Contributions
 Les retours, suggestions et contributions sont les bienvenus via les Issues ou Pull Requests.
